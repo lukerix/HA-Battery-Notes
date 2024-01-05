@@ -1,0 +1,74 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Jeżeli potrzebujesz pomocy z konfiguracją zajrzyj tutaj: https://github.com/andrew-codechimp/ha-battery-notes",
+                "data": {
+                    "device_id": "Urządzenie",
+                    "name": "Nazwa"
+                },
+                "data_description": {
+                    "name": "Pozostawienie pustego pola weźmie nazwę z urządzenia źródłowego"
+                }
+            },
+            "battery": {
+                "data": {
+                    "battery_type": "Typ baterii"
+                },
+                "data_description": {
+                    "battery_type": "Opcjonalnie dodaj ilość baterii jeżeli większą niż 1 np. 2x AAA"
+                }
+            }
+        },
+        "abort": {
+            "already_configured": "Urządzenie już skonfigurowane"
+        },
+        "error": {
+            "unknown": "Wystąpił nieznany błąd."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "description": "Jeżeli potrzebujesz pomocy z konfiguracją zajrzyj tutaj: https://github.com/andrew-codechimp/ha-battery-notes",
+                "data": {
+                    "name": "Nazwa",
+                    "battery_type": "Typ baterii"
+                },
+                "data_description": {
+                    "name": "Pozostawienie pustego pola weźmie nazwę z urządzenia źródłowego"
+                }
+            }
+        },
+        "error": {
+            "unknown": "Wystąpił nieznany błąd."
+        }
+    },
+    "entity": {
+        "button": {
+            "battery_replaced": {
+                "name": "Bateria wymieniona"
+            }
+        },
+        "sensor": {
+            "battery_type": {
+                "name": "Typ baterii"
+            },
+            "battery_last_replaced": {
+                "name": "Data ostatniej wymiany baterii"
+            }
+        }
+    },
+    "services": {
+        "set_battery_replaced": {
+            "description": "Ustaw ostatnią wymianę baterii na teraz.",
+            "fields": {
+                "device_id": {
+                    "description": "Urządzenie, w którym wymieniono baterię",
+                    "name": "Urządzenie"
+                }
+            },
+            "name": "Ustaw wymieniono baterię"
+        }
+    }
+}
